@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Scheduler">
+   <children>
+      <Text layoutX="14.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa przedmiotu: " AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="lName" layoutX="120.0" layoutY="365.0" AnchorPane.bottomAnchor="8.0" />
+      <Text layoutX="278.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start:" AnchorPane.bottomAnchor="14.0" />
+      <TextField fx:id="sTime" layoutX="306.0" layoutY="365.0" prefHeight="25.0" prefWidth="53.0" AnchorPane.bottomAnchor="8.0" />
+      <Text layoutX="375.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Koniec:" AnchorPane.bottomAnchor="14.0" />
+      <TextField fx:id="eTime" layoutX="413.0" layoutY="365.0" prefHeight="25.0" prefWidth="53.0" AnchorPane.bottomAnchor="8.0" />
+      <Button layoutX="473.0" layoutY="365.0" mnemonicParsing="false" onMouseClicked="#addLesson" text="Dodaj" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="14.0" />
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="332.0" prefWidth="574.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <columns>
+          <TableColumn fx:id="lNameCell" prefWidth="316.0" text="Nazwa przedmiotu" />
+            <TableColumn minWidth="0.0" prefWidth="102.0" text="Czas">
+               <columns>
+                  <TableColumn fx:id="sTimeCell" prefWidth="75.0" text="Start" />
+                  <TableColumn fx:id="eTimeCell" prefWidth="75.0" text="Koniec" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="deleteCell" minWidth="0.0" prefWidth="107.0" text="Usuń" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

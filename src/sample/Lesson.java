@@ -1,37 +1,32 @@
 package sample;
 
-import javax.xml.crypto.Data;
+import com.google.gson.JsonElement;
+
 import java.util.Date;
 
-public class Lesson {
-    private String lessonName, delete;
-    private Date startTime, endTime;
+public class Lesson extends JsonElement {
+    private String lessonName;
+    private String day;
+    private Date startTime;
+    private Date endTime;
 
-    public Lesson(String lessonName, String delete, Date startTime, Date endTime) {
+    public Lesson(String lessonName, String day, Date startTime, Date endTime) {
         this.lessonName = lessonName;
-        this.delete = delete;
+        this.day = day;
         this.startTime = startTime;
         this.endTime = endTime;
     }
 
     public String getLessonName() {
-        return lessonName;
+        return this.lessonName;
     }
 
     public void setLessonName(String lessonName) {
         this.lessonName = lessonName;
     }
 
-    public String getDelete() {
-        return delete;
-    }
-
-    public void setDelete(String delete) {
-        this.delete = delete;
-    }
-
     public Date getStartTime() {
-        return startTime;
+        return this.startTime;
     }
 
     public void setStartTime(Date startTime) {
@@ -39,10 +34,23 @@ public class Lesson {
     }
 
     public Date getEndTime() {
-        return endTime;
+        return this.endTime;
     }
 
     public void setEndTime(Date endTime) {
         this.endTime = endTime;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public void setDay(String day) {
+        this.day = day;
+    }
+
+    @Override
+    public JsonElement deepCopy() {
+        return null;
     }
 }

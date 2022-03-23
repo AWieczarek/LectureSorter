@@ -1,0 +1,33 @@
+[
+  [
+    {
+      "lessonName": "ASD",
+      "day": "Poniedziałek",
+      "startTime": "11:00:00",
+      "endTime": "12:00:00"
+    },
+    {
+      "lessonName": "TI",
+      "day": "Poniedziałek",
+      "startTime": "13:00:00",
+      "endTime": "14:15:00"
+    }
+  ],
+  [
+    {
+      "lessonName": "WF",
+      "day": "Wtorek",
+      "startTime": "08:00:00",
+      "endTime": "09:00:00"
+    },
+    {
+      "lessonName": "Dupa",
+      "day": "Wtorek",
+      "startTime": "11:00:00",
+      "endTime": "12:00:00"
+    }
+  ],
+  [],
+  [],
+  []
+]
